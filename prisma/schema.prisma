@@ -18,5 +18,13 @@ model Book {
   img       String  
   category  String
   name      String  
-  price     Decimal  
+  price     String  
+}
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique
+  email    String @unique
+  password String
+  address  String
+  createdAt DateTime @default(now())
 }

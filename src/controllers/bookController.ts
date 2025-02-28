@@ -14,7 +14,7 @@ export const addBook = async (req: Request, res: Response) => {
   const { img, category, name, price } = req.body;
   
   try {
-    const book = await createBook({ img, category, name, price: parseFloat(price) });
+    const book = await createBook({ img, category, name, price });
     res.status(201).json(book);
   } catch (error) {
     res.status(400).json({ error: "Failed to create book" });
