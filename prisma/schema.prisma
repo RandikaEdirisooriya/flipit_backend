@@ -14,11 +14,11 @@ datasource db {
 }
 
 model Book {
-  id        Int    @id @default(autoincrement()) 
-  img       String  
-  category  String
-  name      String  
-  price     String  
+  id       Int     @id @default(autoincrement())
+  img      String  @db.Text // Change String to @db.Text
+  category String
+  name     String
+  price    String
 }
 model User {
   id       Int    @id @default(autoincrement())
